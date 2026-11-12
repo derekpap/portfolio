@@ -289,6 +289,21 @@ html:has(.info-panel:popover-open) {
     gap: 8px;
     font-size: var(--portfolio-text-size);
   }
+  /* Stretch the native title link across its mobile card, including the caption and gaps. */
+  .index-row::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+  .index-row:focus-visible {
+    outline: none;
+  }
+  .index-row:focus-visible::after {
+    outline: 2px solid var(--accent-ink);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
   .index-name {
     font-size: var(--portfolio-text-size);
   }
